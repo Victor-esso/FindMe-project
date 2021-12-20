@@ -1,434 +1,49 @@
-body{
+
+
+[main-container] [inner-container] [right]{
+    display:none;
+    background-color: unset;
+}
+
+[main-container] [inner-container] [left]{
     background-color: var(--bg-grey);
-}
-#login-signup-container{
-   position: relative;
-    width: 100%;
-    height: 90vh;
+    display:block;  
 }
 
-#login-signup-container>div#inner-container{
-    width: 100%;
-    height: 100%;
-    display: block;
-}
 
-#login-signup-container>#background-image{
-    position: absolute;
-    width: 100%;
-    display: none;
-}
-#login-signup-container>div#inner-container>div{
-    width: 100%;
-    height: 100%;
-}
-
-#login-container{
-    position: relative;
-    overflow-x: hidden;
+[main-container] [inner-container] [form-container]{
+    padding: 10px 30px 10px 30px;
    
 }
-#main-login-container{
-    background-color: var(--bg-grey);
-    position: relative;
-    height: 100%;
-}
-
-#signup-container{
-    position: relative;
-    overflow-x: hidden; 
-}
-
-
-
-
-.sub-container{
-    width: 200%;
-    position: absolute;
-    display: flex;
-    left: 0%;
-    transition: .3s ease-in-out;
-
-}
-.sub-container>div{
-    width: 50%;
-}
-
-input[type='text'],input[type='password']{
-    border: none;
-    width: 100%;
-    padding: 12px 20px;
-    font-size: .8rem;
-    border-radius: 6px;
-    color: var(--txt-on-white);
-
-}
-[single-input-icon] input{
-    padding-right: 40px;
-}
-[single-input]{
-    margin-top: 18px;
-    margin-bottom: 18px;
-    position: relative;
-}
-[single-input] .input-icon{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--txt-on-white);
-    cursor:pointer;
-}
-input[type='text']:focus,input[type='password']:focus{
-    outline: none;
-}
-
-input[type='text']::placeholder,input[type='password']::placeholder{
-    color: var(--txt-on-white);
+[main-container] [inner-container] [form-container] [top]{
+    margin-bottom: 100px;
 }
 [forgot-password]{
-    margin-top: -20px;
-    text-align: right;
-    padding-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    padding-right: 15px;
 }
 [forgot-password] a{
-    text-decoration: none;
-    font-size: .75rem;
     color: var(--main);
-}
-
-[block-sumbit] button{
-    border: none;
-    display: block;
-    width: 100%;
-    padding: 15px 0px;
-    font-size: .85rem;
-    font-weight:600;
-    border-radius: 6px;
-    color:#fff;
-    background-color: var(--main);
-    margin-top: 20px;
-    margin-bottom: 18px;
-    cursor: pointer;
-}
-
-#main-login-container>div,#call-signup-container,#call-login-container{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-}
-[signup-container]{
-    padding-top: unset !important;
-}
-.content-holder{
-    width: 100%;
-    padding: 0px 50px;
-}
-#main-login-container h1, #call-signup-container h1, #call-login-container h1{
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--main);
-}
-#main-login-container h3, #call-signup-container h3, #call-login-container h3{
-    font-size: .85rem;
-    color: var(--txt-on-grey);
-    font-weight: 400;
-    margin-bottom: 35px;
-}
-
-.or-divider{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.or-divider::after{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid var(--main);  
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 1;
-}
-.or-divider span{
-    background-color: var(--bg-grey);
-    padding: 5px 15px;
-    z-index: 2;
-    color:var(--main);
-    font-size: .8rem;  
-}
-[login-options]{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5px;
-}
-[login-options] button{
-    border: none;
-    background-color: #fff;
-    padding: 10px 30px ;
-    border-radius: 5px;
-    cursor: pointer;
-    
-}
-[login-options] button img{
-    width: 15px;
-}
-[bottom-login]{
-    margin-top: 50px;
-}
-[signup-container] [bottom-login]{
-    margin-top: 10px;
-}
-
-
-#call-signup-container h1,#call-signup-container h3,#call-login-container h1,#call-login-container h3{
-    text-align: center;
-    color: #fff;
-}
-#call-signup-container,#call-login-container{
-    background-color: rgba(100, 100, 100,.5);
-}
-#call-signup-container [block-sumbit] button, #call-login-container [block-sumbit] button{
-    background-color: unset;
-    border: 2px solid #fff;
-    transition: .2s ease;
-}
-#call-signup-container [block-sumbit] button:hover, #call-login-container [block-sumbit] button:hover{
-    background-color: #fff;
-    border: 2px solid #fff;
-    color: var(--main);
-}
-[block-sumbit] button:focus{
-    outline: none;
-}
-
-button#inner-signup-btn{
-    border:none;
-    position: absolute;
-    border: 1px solid var(--main);
-    background-color: var(--bg-grey);
     font-size: .8rem;
-    color: var(--main);
-    font-weight: 500;
-    border-radius: 5px;
-    padding: 5px 15px ;
-    right: 30px;
-    top: 20px;
-    transition: .1s ease-in;
-    cursor: pointer;
-    display: block;
-
 }
-
-button#inner-signup-btn:hover{
-    background-color: var(--main);
-    color: #fff;
-}
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 430px){
-    .content-holder{
-       margin-top: 60px;
-        padding: 0px 20px;
-    }
-}
-
-#inner-container, #login-container,.sub-container,#main-login-container,.inner-holder,#signup-container, #call-signup-container, #call-login-container{
-    height: 100%;
-}
-
-#main-login-container{
-    display: block;
-}
-#call-signup-container,#call-login-container{
-    display: none;
-}
-
-
-
-
-
-
-
-
-
 
 
 @media only screen and (min-width: 760px){
-    body{
-        background-color: unset;
-    }
-    .container-outside{
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
     
-    }
-    #login-signup-container>div#inner-container{
-        width: 100%;
-        display: flex;
-    }
-    #login-signup-container>#background-image{
-        position: absolute;
-        width: 100%;
-        height: unset;
-        display: block;
-        background-color: var(--bg-grey);
-        z-index: -1;
-        overflow: hidden;
-    }
-    #login-signup-container>#background-image>img{
-        width: 110%;
-        object-fit: cover;
-        object-position: center;
-        filter: blur(1px);
-        opacity: .7;
-    }
-    
-    #login-signup-container{
-        /* overflow: hidden; */
-        width: 800px;
-        height: 570px;
-    }
-    
-    #login-signup-container>div#inner-container>div{
-        width: 50%;
+    [main-container] [inner-container] [right]{
+        display:block;
     }
 
-    #signup-container{
-        display: block;
-    }
-    #login-container{
-       display: block;
-    }
-
-    [login-options] button{
-        padding: 10px 35px ;
+    [main-container] [inner-container] [left]{
+        display:block;
+        
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
-    #inner-container, #login-container,.sub-container,#main-login-container,.inner-holder,#signup-container, #call-signup-container, #call-login-container,#login-signup-container>#background-image{
-        height: 570px;
+    [main-container] [inner-container] [form-container]{
+        padding: 110px 50px 10px 50px;
     }
-
-    button#inner-signup-btn{
-        display: none;
-    }
-
-    #main-login-container{
-        display: block;
-    }
-    #call-signup-container,#call-login-container{
-        display: flex;
-    }
-
-
-
-
-
-
-
-
-
- /*MAKING A SHADOWW */
-.shadow-it::after{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0,00.1);
-    filter: blur(10px);
-    transform: translateY(20%) scale(0.7);
-    border-radius: 30%;
-    z-index: -4;
-    /* box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.027); */
-}
-.shadow-it::before{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0,00.1);
-    filter: blur(20px);
-    transform: translateY(10%) scale(.96);
-    border-radius: 30%;
-    z-index: -4;
-    /* box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.027); */
-}
-.shadow-it-hover:hover::after{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0,00.02);
-    filter: blur(10px);
-    transform: translateY(30%) scale(0.7);
-    z-index: -1;
-    transition: .3s ease;
-    /* box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.027); */
-}
-.shadow-it-hover{
-    transition: .3s ease;
-}
-.shadow-it-hover:hover::before{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0,00.02);
-    filter: blur(13px);
-    transform: translateY(40%) scale(1);
-    z-index: -1;
-    transition: .3s ease;
-    /* box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.027); */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -22,61 +22,85 @@
     <!-- Style Sheet-->
     <link rel="stylesheet" href="assets/app/css/style.css">
 
-    <!-- Sign Sheet-->
+    <!-- Login Sheet-->
     <link rel="stylesheet" href="assets/app/css/signup.css">
 
-    <!-- Login Sheet-->
-    <link rel="stylesheet" href="assets/app/css/login.css">
 
     <!--Page title-->
-	<title>Login</title>
+	<title>Sign Up</title>
 </head>
 <body>
     
 
 
-    <!--Login Outer Container-->
+
+    <!--Signup Outer Container-->
     <section outer-container>
 
-        <!--Login Container Main-->
+        <!--Signup Container Main-->
         <div main-container>
 
             <!--Background image holder-->
             <div backdrop><img src="images/login-register-background.jpg" alt=""></div>
 
-
-            <!--Inner Container-->
             <div inner-container>
                 <!--Left Area-->
                 <div left scrollbar>
+                    <div detail-container>
+                        <div>
+                            <h1>Already Having An Account?</h1>
+                            <h3>We Are Happy To Have You Back</h3>
+                            <div block-sumbit>
+                                <a href="login.html">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Right Area-->
+                <div right no-scrollbar>
 
                     <div form-container>
 
-                        <!--Link to Signup Page Mobile View-->
+                        <!--Link to Login Page Mobile View-->
                         <div hide-d-flex top>
-                            <a href="signup.html"> Sign up</a>
+                            <a href="login.html">Login</a>
                         </div>
 
-                        <h1>Welcome Back!</h1>
-                        <h3>We Are Happy To Have You Back</h3>
+                        <h1>Create Account</h1>
+                        <h3>Get Started by Creating Your New Account</h3>
 
-                        <!--Login Up Form-->
+                        <!--Sign Up Form-->
                         <form action="">
 
                             <div input>
-                                <input type="text" placeholder="Enter Email / Phone Number">
+                                <input type="text" placeholder="Enter Full Name">
+                            </div>
+
+                            <div input>
+                                <input type="text" placeholder="Enter Email Address">
+                            </div>
+
+                            <div input>
+                                <input type="text" placeholder="Enter Phone Number">
                             </div>
 
                             <div input icon >
                                 <input type="password" placeholder="Enter Password" id="password">
                                 <div icon password-visibility for="password"><i class="fa fa-eye"></i></div>
                             </div>
-                            
-                            <!--Link To Forgot Password-->
-                            <div forgot-password><a href="forgot_password.html">Forgot Password?</a></div>
+
+                            <div input>
+                                <input type="text" placeholder="Referral Code (optional)">
+                            </div>
+
+                            <div input checkbox terms>
+                                <input type="checkbox" name="" id="terms">
+                                <div><label for="terms">By clicking, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label></div>
+                            </div>
 
                             <div input submit>
-                                <button type="submit">Login</button>
+                                <button type="submit">Register</button>
                             </div>
 
                         </form>
@@ -94,26 +118,61 @@
                         </div>
 
                     </div>
-
-                </div>
-
-                <!--Right Area-->
-                <div right no-scrollbar>
-                    <div detail-container>
-                        <div>
-                            <h1>Don't Have An Account?</h1>
-                            <h3>Get Started By Creating Your New Account</h3>
-                            <div block-sumbit>
-                                <a href="signup.html">Sign up</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             
         </div>
 
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
