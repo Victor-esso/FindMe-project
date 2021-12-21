@@ -1,0 +1,213 @@
+
+body{
+    background-color: var(--bg-grey);
+}
+
+[outer-container]{
+    display:  block;
+    width: 100%;
+}
+
+[outer-container] [one]{
+    display:  block;
+    padding: 10px;
+
+}
+
+[outer-container] [two]{
+    display: none;
+    position: relative;
+}
+
+[outer-container] [two] img{
+    width: 100%;
+}
+
+[form-container] h1{
+    color: var(--main);
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+[form-container] h3{
+    color: var(--txt-on-grey);
+    text-align: center;
+    font-weight: 400;
+    font-size: .9rem;
+}
+[form-container] [edit-number]{
+    text-align: center;
+    color: var(--main);
+    font-size: .9rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+[form-container] [edit-number] a{
+    text-decoration: none;
+    border-radius: 100%;
+    padding: 5px 8px;
+    color: #fff;
+    background-color: var(--main);
+    margin-left: 10px;
+}
+[form-container] [input-container]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+[form-container] [input-container] input{
+    border: 1px solid var(--main);
+    margin: 0 5px;
+    width: 65px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--main);
+}
+[form-container] [input-container] input:focus{
+    outline: none;
+    border-width: 2px;
+}
+[form-container] [input][submit]{
+    padding: 0px 60px;
+}
+
+[form-container] [resend]{
+    color: var(--main);
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 30px;
+}
+[form-container] [resend] a{
+    color: var(--main);
+    text-decoration: underline;
+    font-weight: 700;
+}
+[top-section]{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 30px;
+    margin-bottom: 70px;
+}
+[top-section] a span{
+    color: var(--main);
+    font-size: 2.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px){
+    [outer-container]{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    [outer-container] [one]{
+        display:  block;
+        width: 400px;
+        padding: unset;
+
+    
+    }
+
+    [outer-container] [two]{
+        display: block;
+        width: 500px;
+        padding: unset;
+    }
+
+    [form-container] h1{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    [form-container] h3{
+        font-size: .9rem;
+    }
+        
+    [form-container] [edit-number]{
+        font-size: .9rem;
+        font-weight: 600;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    [form-container] [edit-number] a{
+       
+        border-radius: 100%;
+        padding: 5px 8px;
+        color: #fff;
+        background-color: var(--main);
+        margin-left: 10px;
+    }
+    [form-container] [input-container]{
+        margin-bottom: 30px;
+    }
+    [form-container] [input-container] input{
+        border: 1px solid var(--main);
+        margin: 0 5px;
+        width: 65px;
+        height: 60px;
+        text-align: center;
+        font-size: 1.4rem;
+        border-radius: 10px;
+        font-weight: 600;
+        color: var(--main);
+    }
+    [form-container] [input-container] input:focus{
+        outline: none;
+        border-width: 2px;
+    }
+    [form-container] [input][submit]{
+        padding: 0px 60px;
+    }
+
+    [top-section]{
+        position: absolute;
+        padding: 50px 70px;
+        margin-bottom: unset;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px) and (max-width:970px){
+    [outer-container] [two]{
+        display: block;
+        width: 400px;
+        padding: 20px;
+        padding: unset;
+    }
+}

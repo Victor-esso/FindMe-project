@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Animate Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Google Icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Style Sheet-->
+    <link rel="stylesheet" href="assets/app/css/style.css">
+
+    <!-- Forgot password style Sheet-->
+    <link rel="stylesheet" href="assets/app/css/otp.css">
+
+
+    <!--Page title-->
+	<title>OTP</title>
+</head>
+<body>
+    
+    <div top-section>
+        <a href="forgot_password.html"><span class="material-icons">west</span></a>
+    </div>
+
+
+    <!-- OTP Container-->
+    <section outer-container>
+
+        <!--Left Side of the page and the side that shows on mobile-->
+        <div one>
+            <div form-container>
+                <h1>Verification Code</h1>
+                <h3>We have sent the verification code to<br/> your Mobile Number </h3>
+                <div edit-number>+234 8034 345 3456 <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></div>
+
+
+                <form action="">
+                    <div input-container>
+                        <input type="text" autocomplete="off" maxlength="1" id="digit-1" data-next="digit-2">
+                        <input type="text" autocomplete="off" maxlength="1" id="digit-2" data-next="digit-3" data-previous="digit-1">
+                        <input type="text" autocomplete="off" maxlength="1" id="digit-3" data-next="digit-4" data-previous="digit-2">
+                        <input type="text" autocomplete="off" maxlength="1" id="digit-4"  data-previous="digit-3">
+                    </div>
+                    <div input submit>
+                        <button type="submit">Submit & Continue</button>
+                    </div>
+                </form>
+
+                <div resend>Didn't recieve an OTP?<a href="#">Resend</a></div>
+            </div>
+        </div>
+
+        <!--Shows the illustration and is only visible on desktop-->
+        <div two><img src="images/svg/otp illustration.svg" alt=""></div>
+        
+        
+      
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+<!-- Functions Javascript -->
+<script src="assets/app/js/functions.js"></script>
+
+<!-- Default Javascript -->
+<script src="assets/app/js/javascript.js"></script>
+
+<!-- Forgot Password Javascript -->
+<script src="assets/app/js/otp.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
