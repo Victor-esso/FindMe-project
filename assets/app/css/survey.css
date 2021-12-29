@@ -1,0 +1,335 @@
+body{
+    background-color: var(--bg-grey);
+}   
+
+[outer-container]{
+    display:  block;
+    width: 100%;
+    position: relative;
+}
+
+[outer-container] [two]{
+    display:  block;
+    position: relative;
+
+}
+[form-container]{
+    width: 100%;
+    position: relative;
+}
+
+[form-container] h1{
+    color: var(--main);
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+[form-container] h3{
+    color: var(--txt-on-grey);
+    text-align: center;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+[outer-container] [one]{
+    display: none;
+    position: relative;
+}
+
+[outer-container] [one] img{
+    width: 100%;
+}
+
+
+[survey-box]{
+    width: 100%;
+    position: relative;
+}
+
+[survey-box] .owl-nav{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+[survey-box] .owl-nav button.owl-prev{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    left: -55px;
+}
+[survey-box] .owl-nav button.owl-next{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    right: -55px;
+}
+
+[survey-box] .owl-nav button{
+    border: 2px solid var(--txt-on-grey) !important;
+    color: var(--txt-on-grey) !important;
+}
+
+[survey-box] .owl-nav button:hover{
+    border: 2px solid var(--main) !important;
+    color: var(--main) !important;
+}
+
+div.owl-dots{
+    display: flex;
+    justify-content: center;
+}
+div.owl-dots>button.owl-dot{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(160, 158, 158, 0.863);
+    margin: 0px 4px;
+    border-radius: 100%;
+    margin-top: 20px;
+
+}
+div.owl-dots>button.owl-dot.active{
+    background-color: var(--main);
+}
+
+
+[survey-box] .item{
+    position: relative;
+    width: 100vw !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 2.04081633vw;
+    padding-left: 2.04081633vw;
+}
+[survey-box] .item button{
+    position: relative;
+    display: block;
+    background-color: yellow;
+    width: 30.612348933vw;
+    height: 25.0464673094vw;
+    border-radius: 10px;
+    margin-bottom: 2.04081633vw;
+    margin-right: 2.04081633vw;    
+    z-index: 1;
+
+}
+
+[form-container] input[type="submit"]{
+    background-color: var(--main);
+    border: none;
+    color: #fff;
+    font-size: .9rem;
+    padding: 20px 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+[form-container] input[type="submit"]:focus{
+    outline: none;
+}
+
+[form-container] form{
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+[form-container]{
+    padding-top: 30px;
+}
+
+[form-container] form input[type="submit"]:disabled{
+    opacity: .6;
+    background-color: rgba(160, 160, 160, 0.753);
+    cursor: not-allowed;
+}
+
+[survey-box] .item button [backdrop-image]{
+    background-color: black;
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+[survey-box] .item button [title]{
+    position: absolute;
+    font-size: .85rem;
+    color: #fff;
+    z-index: 4;
+    bottom: 10px;
+    left: 10px;
+    transition: .2s ease;
+    font-weight: 600;
+    text-align: left;
+    
+}
+
+[survey-box] .item button [backdrop-image] img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: .5;
+    transition: .2s ease;
+}
+[survey-box] .item button[selected] [backdrop-image] img{
+    transform: scale(1.1);
+    opacity: .4;
+    filter: blur(2px);
+}
+
+[survey-box] .item button[selected] [title]{
+    bottom: 15px;
+}
+
+[survey-box] .item button [icon]{
+    position: absolute;
+    z-index: 30;
+    color: #fff;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3vw;
+    bottom: -7px;
+    right: -7px;
+    background-color: var(--main);
+    border-radius: 100%;
+    border: 4px solid var(--bg-grey);
+    display: none;
+
+}
+
+[survey-box] .item button[selected] [icon]{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px){
+    [outer-container]{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    [outer-container] [two]{
+        display:  block;
+        width: 490px;
+        padding: unset;    
+    }
+
+    [outer-container] [one]{
+        display: block;
+        width: 600px;
+        padding: unset;
+    }
+
+    [form-container]{
+        padding: unset;
+    }
+    [form-container] h1{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    [form-container] h3{
+        font-size: 1rem;
+    }
+
+    [survey-box] .owl-nav{
+        display: block;
+    }
+
+
+
+    [survey-box] .item{
+        position: relative;
+        width: 100% !important;
+        height: 310px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    [survey-box] .item button{
+        display: block;
+        width: 110px;
+        height: 90px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    
+    }
+
+    [form-container] input[type="submit"]{
+        font-size: .9rem;
+        padding: 15px 35px;
+        margin-bottom: unset;
+    }
+
+    [survey-box] .item button [icon]{
+        padding: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px) and (max-width:970px){
+    [outer-container] [one]{
+        display: none;
+    }
+
+    [survey-box] .item button [icon]{
+        padding: 4px;
+    }
+
+}

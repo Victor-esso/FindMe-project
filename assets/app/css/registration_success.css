@@ -22,7 +22,15 @@ body{
 }
 
 [outer-container] [inner-container] [one]{
-    display: none;
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+[outer-container] [inner-container] [one] img{
+    width: 100%;
 }
 
 [outer-container] [inner-container] [two]{
@@ -38,7 +46,7 @@ body{
     color: var(--main);
     font-size: 1.9rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 [form-container] h3{
@@ -46,35 +54,27 @@ body{
     color: var(--txt-on-grey);
     font-size: .9rem;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-[form-container] form{
-    padding: 0px 40px 50px 40px ;
-}
-
-[form-container] [input]{
-    margin-bottom: 40px;
-}
-[form-container] [input][submit]{
-    margin-bottom: unset;
-}
-
-[form-container] [top]{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 140px;
-    padding: 20px 30px 0px 30px ;
-}
-[form-container] [top] a{
+[form-container] a{
+    display: block;
+    background-color: var(--main);
+    text-align: center;
+    color: #fff;
+    padding: 20px 0px;
+    font-size: .9rem;
+    border-radius: 9px;
+    width: 80%;
+    margin: auto;
+    font-weight: 600;
     text-decoration: none;
-    border:1px solid var(--main);
-    font-size: .85rem;
-    color: var(--main);
-    padding: 10px 20px;
-    border-radius: 5px;
 }
+
+[form-container] a:hover{
+    text-decoration: none;
+}
+
 
 
 
@@ -114,22 +114,21 @@ body{
     [outer-container] [inner-container] [one]{
         width: 500px;
         display: block;
-    }
-    [outer-container] [inner-container] [one] img{
-        width: 100%;
+        margin: unset;
     }
     
     [outer-container] [inner-container] [two]{
-        width: 400px;
+        width: 300px;
     }
 
     [form-container]{
         padding: unset;
     }
-    [form-container] form{
-        padding: 0px 30px 50px 30px ;
-    }
 
+    [form-container] a{
+        width: 100%;
+        padding: 15px 0px;
+    }
 }
 
 @media only screen and (min-width: 760px) and (max-width:970px){

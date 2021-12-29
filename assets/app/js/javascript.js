@@ -42,6 +42,7 @@ function autoLoad(){
                     var owlLoop = isDefined($(this).attr('owlLoop'),true)? true : false ;
                     var owlCenter = isDefined($(this).attr('owlCenter'),true)? true : false ;
                     var owlAutoWidth = isDefined($(this).attr('owlAutoWidth'),true)? true : false ;
+                    var owlAutoHeight = isDefined($(this).attr('owlAutoHeight'),true)? true : false ;
                     var owlNoMouseDrag = isDefined($(this).attr('owlNoMouseDrag'),true)? false : true ;
                     var owlNoTouchDrag = isDefined($(this).attr('owlNoTouchDrag'),true)? false : true ;
                     var owlNoPullDrag = isDefined($(this).attr('owlNoPullDrag'),true)? false : true ;
@@ -94,6 +95,8 @@ function autoLoad(){
                         navText:[owlNavTextPrevious,owlNavTextNext],    //HTML allowed.
 
                         autoWidth:owlAutoWidth,     //Set non grid content. Try using width style on divs.
+
+                        autoHeight:owlAutoHeight,
 
                         stagePadding:owlStagePadding,   //Padding left and right on stage (can see neighbours).
 

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Google Icon-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
     <!-- Style Sheet-->
     <link rel="stylesheet" href="assets/app/css/style.css">
@@ -49,11 +49,15 @@
 
                 <form action="">
                     <div input-container>
-                        <input type="text" autocomplete="off" maxlength="1" id="digit-1" data-next="digit-2">
-                        <input type="text" autocomplete="off" maxlength="1" id="digit-2" data-next="digit-3" data-previous="digit-1">
-                        <input type="text" autocomplete="off" maxlength="1" id="digit-3" data-next="digit-4" data-previous="digit-2">
-                        <input type="text" autocomplete="off" maxlength="1" id="digit-4"  data-previous="digit-3">
+                        <input type="text" otp-part autocomplete="off" maxlength="1" id="digit-1" data-next="digit-2">
+                        <input type="text" otp-part autocomplete="off" maxlength="1" id="digit-2" data-next="digit-3" data-previous="digit-1">
+                        <input type="text" otp-part autocomplete="off" maxlength="1" id="digit-3" data-next="digit-4" data-previous="digit-2">
+                        <input type="text" otp-part autocomplete="off" maxlength="1" id="digit-4"  data-previous="digit-3">
                     </div>
+
+                    <!--Main otp input-->
+                    <input type="text" name="otp" otp-main>
+
                     <div input submit>
                         <button type="submit">Submit & Continue</button>
                     </div>
