@@ -1,0 +1,350 @@
+
+body{
+    background-color: var(--bg-grey);
+}
+
+form input[type="submit"]:disabled{
+    opacity: .6;
+    background-color: rgba(160, 160, 160, 0.753);
+    cursor: not-allowed;
+} 
+
+[survery-container]{
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    overflow: scroll;
+}
+[survery-inner]{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 2.04081633vw;
+    padding-left: 2.04081633vw;
+    
+    transition: .4s linear;
+    /* left: -100%; */
+
+}
+
+button[survey-item]{
+    display: inline-block;
+    position: relative;
+    width: 30.612348933vw;
+    height: 25.0464673094vw;
+    background-color: black;
+    margin: unset;
+    margin-bottom: 2.04081633vw;
+    margin-right: 2.04081633vw;  
+    border-radius: 10px;
+}
+
+button[survey-item] [backdrop-image]{
+    background-color: black;
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+button[survey-item] [title]{
+    position: absolute;
+    font-size: .8rem;
+    color: #fff;
+    z-index: 4;
+    bottom: 10px;
+    left: 10px;
+    transition: .2s ease;
+    font-weight: 600;
+    text-align: left;
+    
+}
+
+button[survey-item] [backdrop-image] img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: .5;
+    transition: .2s ease;
+}
+button[selected][survey-item] [backdrop-image] img{
+    transform: scale(1.1);
+    opacity: .4;
+    filter: blur(2px);
+}
+
+button[selected][survey-item] [title]{
+    bottom: 20px;
+}
+
+button[survey-item] [icon]{
+    position: absolute;
+    z-index: 30;
+    color: #fff;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3vw;
+    bottom: -7px;
+    right: -7px;
+    background-color: var(--main);
+    border-radius: 100%;
+    border: 4px solid var(--bg-grey);
+    display: none;
+}
+
+button[selected][survey-item] [icon]{
+    display: flex;
+}
+
+[outter-container]{
+    width: 100%;
+}
+[outter-container] [bottom] [right]{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+}
+
+[outter-container] [bottom] div {
+    width: 100%;
+
+}
+
+[outter-container] [bottom] [left], [outter-container] [nav-dots],[outter-container] [bottom] [right] button {
+    display: none;
+}
+
+[outter-container] [bottom] [left] button, [outter-container] [bottom] [right] button, [outter-container] [bottom] [right] form input[type="submit"] {
+    border: 2px solid var(--main);
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--main);
+    width: 120px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: unset;
+    cursor: pointer;
+}
+
+[outter-container] [bottom] button[active],  [outter-container] [bottom] [right] form input[type="submit"][active] {
+    color: #fff;
+    background-color: var(--main);
+}
+
+[outter-container] [nav-dots] [center]{
+    width: 25px;
+    justify-content: space-between;
+
+}
+[outter-container] [nav-dots] [center] div {
+    width: 10px;
+    height: 10px;
+    background-color: #C4C4C4;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+[outter-container] [nav-dots] [center] div[active]{
+    background-color: var(--main);
+}
+
+[outter-container] [bottom] [right] form input[type="submit"]{
+    width: 80vw;
+    padding: 20px 0px;
+    font-size: .9rem;
+}
+
+
+
+[outter-container] [top]{
+    display: block;
+    width: 100%;
+    padding: 0px 15px;
+    margin-top: 10px;
+}
+
+[outter-container] [top] h1{
+    color: var(--main);
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+[outter-container] [top] h3{
+    color: var(--txt-on-grey);
+    text-align: center;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+[outter-container] [top] div[input]{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+[outter-container] [bottom]{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    
+    [survery-container]{
+        position: relative;
+        width: 995px;
+        height: 460px;
+        overflow: hidden;
+    }
+    [survery-inner]{
+        position: absolute;
+        display: block;
+        width: 1050px;
+        height: 200%;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-left: 10px;
+        /* left: -100%; */
+
+    }
+    
+    button[survey-item]{
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 80px;
+        margin: unset;
+        margin-left: -4px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    button[survey-item] [icon]{
+        padding: 3px;
+    }
+
+    button[selected][survey-item] [icon]{
+        display: flex;
+    }
+
+    [outter-container]{
+        position: relative;
+        width: fit-content;
+        margin: auto;
+    }
+    [outter-container] [bottom]{
+        margin: unset;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    [outter-container] [bottom] div {
+        width: unset;
+    }
+    [outter-container] [bottom] [left]{
+        display: block;
+    }
+    [outter-container] [nav-dots] [center] {
+        display: flex;
+    }
+    [outter-container] [nav-dots]{
+        display: flex;
+        position: absolute;
+        top: 91%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    [outter-container] [bottom] [right] form[form-input],[outter-container] [bottom] [left] button {
+        display: none;
+    }
+    [outter-container] [bottom] [right] button{
+        display: block;
+    }
+
+    [outter-container] [bottom] [right]{
+        display: flex;
+        justify-content: center;
+        width: unset;
+        padding: unset;
+    }
+
+    [outter-container] [bottom] [right] form input[type="submit"]{
+        width: 120px;
+        padding: 10px 0px;
+        font-size: .8rem;
+    }
+
+    [outter-container] [top]{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: unset;
+        margin: unset;
+        margin-top: 29px;
+        padding: 0px 10px;
+    }
+
+    [outter-container] [top] h1{
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    [outter-container] [top] h3{
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    [outter-container] [top] div[input]{
+        width: 300px;
+        margin: unset;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
