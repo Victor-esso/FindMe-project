@@ -1,0 +1,102 @@
+html, body {
+    height: unset;
+}
+/**CLOSE AND BACK BUTTON LOCATION ***/
+
+[tab-right-icon]{
+    position: relative;
+    justify-content: flex-end;
+    padding: 0px 20px;
+    z-index: 100;
+    display: flex;
+}
+[tab-left-icon]{
+    position: relative;
+    z-index: 100;
+    left: 20px;
+    top: 10px;
+    display: flex;
+}  
+
+/**************************Form container****************************/
+/** FORM CONTAINER **/
+[form-container]{
+    width: 100%;
+    height: unset;
+    display: block;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    padding: 60px 40px 0px 40px;
+    overflow: hidden;
+}
+[form-container] [top]{
+    margin-top: 15px;
+}
+
+[form-container] [bottom]{
+    margin-bottom: 15px;
+}
+[form-container] h3{
+    margin-bottom: 10px;
+}
+
+/********RIGHT********/
+[main-outter-container] [right] div>img{
+    width: 85%;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px){
+    [tab-right-icon]{
+        position: absolute;
+        z-index: 100;
+        right: 20px;
+        top: 10px;
+        display: flex;
+    }
+    [tab-left-icon]{
+        position: absolute;
+        z-index: 100;
+        left: 20px;
+        top: 10px;
+        display: flex;
+    } 
+     /**************************Form container****************************/
+    /** FORM CONTAINER **/
+    [form-container]{
+        width: 350px;
+        height: unset;
+        display: block;
+        padding: unset;
+    }
+    [form-container] h3{
+        margin-bottom: 20px;
+    }
+    
+
+    [input][submit]{
+        padding: 0px 30px;
+        margin-bottom: 10px;
+    }
+    section[main-outter-container] [content]{
+        order: 2;
+    }
+    
+    section[main-outter-container] [illustration]{
+        order: 1;
+    }
+}

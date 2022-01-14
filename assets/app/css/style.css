@@ -18,6 +18,7 @@
     box-sizing: border-box;
     font-family: var(--mulish);
  }
+ 
 
 
  /*MAKING A SHADOWW */
@@ -102,7 +103,7 @@ button{
 
 }
 
-[hide-m]{
+[hide-m],[hide-m-flex]{
     display: none !important;
 }
 [hide-d]{
@@ -170,6 +171,8 @@ button{
 
 [input] input::placeholder{
     color: var(--txt-on-white);
+    font-size: .8rem;
+    font-weight: 300;
 }
 
 [input][icon] div[icon]{
@@ -265,22 +268,96 @@ button{
 
 /***************************** submit*****************************************/
 
-[input][submit] button{
+[input][submit] button, [button] button, [button] a{
     display: block;
     width: 100%;
     background-color: unset;
-    border: 2px solid var(--main);
+    border: 1px solid var(--main);
     padding: 20px 0px;
     border-radius: 6px;
     font-weight: 600;
     font-size: 1rem;
     background-color: var(--main);
     color: #fff;
+    text-align: center;
     
+}
+[button] a:hover{
+    text-decoration: none;
+}
+
+[input][submit][border] button, [button][border] button, [button][border] a{
+    color: var(--main);
+    background-color: unset;
 }
 
 
 
+
+
+/**CLOSE AND BACK BUTTON LOCATION ***/
+
+[tab-right-icon]{
+    position: relative;
+    justify-content: flex-end;
+    padding: 0px 20px;
+    z-index: 100;
+    display: flex;
+}
+[tab-left-icon]{
+    position: relative;
+    z-index: 100;
+    left: 20px;
+    top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 20px;
+} 
+[tab-left-icon-ab]{
+    position: absolute;
+    z-index: 100;
+    left: 20px;
+    top: 10px;
+    display: flex;
+}
+[tab-right-icon-ab]{
+    position: absolute;
+    z-index: 100;
+    right: 20px;
+    top: 10px;
+    display: flex;
+} 
+
+[tab-right-icon] button,[tab-left-icon] button,[tab-left-icon-ab] button, [tab-right-icon-ab] button{
+    background-color: unset;
+    background-color: var(--bg-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s ease-in; 
+}
+[tab-left-icon-ab] button a, [tab-right-icon-ab] button a{
+    color: var(--main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[tab-left-icon-ab] button a:hover, [tab-right-icon-ab] button a:hover{
+    text-decoration: none;
+}
+
+[tab-right-icon] button:hover , [tab-left-icon] button:hover, [tab-left-icon-ab] button:hover, [tab-right-icon-ab] button:hover{
+    background-color: rgba(233, 233, 233, 0.404);
+}
+
+[tab-right-icon] span, [tab-left-icon] span, [tab-left-icon-ab] button a span, [tab-right-icon-ab] button a span, [tab-left-icon-ab] button span, [tab-right-icon-ab] button span{
+    font-size: 2rem;
+    color: var(--main);
+    padding: 10px;
+}
 
 
 
@@ -298,12 +375,28 @@ button{
     [hide-m]{
         display: block !important;
     }
-    [hide-d]{
+    [hide-m-flex]{
+        display: flex !important;
+    }
+    [hide-d],[hide-d-flex]{
         display: none !important;
     }
-    [hide-d-flex]{
-        display: none !important;
+
+
+    [tab-right-icon]{
+        position: absolute;
+        z-index: 100;
+        right: 20px;
+        top: 10px;
+        display: flex;
     }
+    [tab-left-icon]{
+        position: absolute;
+        z-index: 100;
+        left: 20px;
+        top: 10px;
+        display: flex;
+    }  
 
 
 
@@ -314,7 +407,7 @@ button{
     }
     [input] input{
         font-size: .8rem;
-        padding: 15px 20px 15px 20px;
+        padding: 16px 20px 16px 20px;
         border-radius: 10px;
     }
 
@@ -323,6 +416,11 @@ button{
         border-radius: 6px;
         font-size: .9rem;
         
+    }
+
+    [tab-close-icon]{
+        right: 50px;
+        top: 40px;
     }
     
 

@@ -1,3 +1,9 @@
+/*** Important for pages 100% height ***/
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--bg-grey);
+}
 
 body{
     background-color: var(--bg-grey);
@@ -7,12 +13,17 @@ body{
 [outer-container]{
     display: block;
     width: 100%;
+    height: 100%;
     position: relative;
 }
 
 [outer-container] [inner-container]{
     display: block;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 [outer-container] [inner-container] [one], [outer-container] [inner-container] [two]{
@@ -23,14 +34,15 @@ body{
 
 [outer-container] [inner-container] [one]{
     display: block;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 60px;
-    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+    
 }
 
 [outer-container] [inner-container] [one] img{
-    width: 100%;
+    width: 80%;
+    display: block;
+    margin: auto;
 }
 
 [outer-container] [inner-container] [two]{
@@ -107,6 +119,7 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-direction: row;
     }
 
     
@@ -115,6 +128,8 @@ body{
         width: 500px;
         display: block;
         margin: unset;
+    }[outer-container] [inner-container] [one] img{
+        width: 90%;
     }
     
     [outer-container] [inner-container] [two]{

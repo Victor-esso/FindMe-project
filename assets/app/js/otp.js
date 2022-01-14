@@ -6,9 +6,7 @@ $(document).ready(function(){
         $(this).attr('maxlength', 1);
         $(this).on('keyup', function(e) {
             var parent = $($(this).parent());
-            //console.log(e.keyCode);
-            
-            if(e.keyCode === 8 || e.keyCode === 37) {
+            if(e.keyCode === 8 || e.keyCode === 37 || $(this).val().trim() == '') {
                 var prev = parent.find('input#' + $(this).data('previous'));
                 
                 if(prev.length) {

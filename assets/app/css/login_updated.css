@@ -1,0 +1,321 @@
+/*** Important for pages 100% height ***/
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-color: var(--bg-grey);
+}
+
+section[main-outter-container]{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-grey);   
+}
+section[main-outter-container] [content]{
+    height: 100%;
+}
+
+section[main-outter-container] [illustration]{
+    padding: 20px;
+    width: 450px;
+    padding: 0px 40px;
+}
+
+[tab-right-icon]{
+    position: absolute;
+    z-index: 100;
+    right: 20px;
+    top: 10px;
+    display: flex;
+}
+[tab-left-icon]{
+    position: absolute;
+    z-index: 100;
+    left: 20px;
+    top: 10px;
+    display: flex;
+} 
+
+/**************************Form container****************************/
+/** FORM CONTAINER **/
+[form-container]{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 100px 40px 10px 40px;
+}
+
+[form-container] [top]{
+    margin-top: 15px;
+}
+
+[form-container] [bottom]{
+    margin-bottom: 15px;
+}
+
+
+[form-container] h1, [right] h1{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--main);
+    text-align: center;
+}
+
+[form-container] h3{
+    font-size: 1.05rem;
+    color: var(--txt-on-grey);
+    font-weight: 300;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+
+[form-container] form{
+    padding: 0px 0px;
+    /* margin-bottom: 50px; */
+}
+
+
+/** FORGOT PASSWORD **/
+[forgot-password]{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    padding-right: 15px;
+}
+[forgot-password] a{
+    color: var(--main);
+    font-size: .8rem;
+}
+
+
+/** LOGIN OPTIONS **/
+[login-options]{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+[login-options] button{
+    border: none;
+    background-color: #fff;
+    padding: 10px 30px ;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+[login-options] button img{
+    width: 15px;
+}
+
+[alternate-tab]{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+[alternate-tab] span{
+    color: var(--txt-on-grey);
+    font-weight: 300;
+    font-size: .8rem;
+}
+[alternate-tab] span a{
+    color: var(--main);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+/** DIVIDER **/
+[or-divider]{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+[or-divider]::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid var(--main);  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+[or-divider] span{
+    background-color: var(--bg-grey);
+    padding: 5px 15px;
+    z-index: 2;
+    color:var(--main);
+    font-size: .8rem;  
+}
+
+
+
+/********RIGHT********/
+[main-outter-container] [right] div>img{
+  width: 100%;
+}
+[main-outter-container] [right] [bottom]{
+    margin-top: 60px;
+}
+
+[main-outter-container] [right] [bottom] h1{
+    font-size: 1.1rem;
+    margin: unset;
+    margin-bottom: 5px;
+}
+
+[main-outter-container] [right] [bottom] h3{
+    font-size:.9rem;
+    text-align: center;
+    color: var(--txt-on-grey);
+    font-weight: 300;
+}
+
+[main-outter-container] [right] [bottom] a{
+    padding: 13px 0px;
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+[main-outter-container] [right] [bottom] [button]{
+    padding: 0px 36px;
+    margin-top: 15px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px){
+
+    section[main-outter-container]{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+    }
+
+    section[main-outter-container] [content]{
+        padding: 20px;
+        height: unset;
+    }
+    
+
+
+
+
+
+
+
+    /**************************Form container****************************/
+    /** FORM CONTAINER **/
+    [form-container]{
+        width: 310px;
+        height: unset;
+        display: block;
+        padding: unset;
+    }
+
+    [form-container] [top], [form-container] [bottom]{
+        margin: unset;
+    }
+
+    [form-container] form{
+        padding: unset;
+        margin-bottom: unset;
+    }
+
+    /** FORGOT PASSWORD **/
+    [forgot-password]{
+        margin-bottom: 30px;
+    }
+
+
+    /** LOGIN OPTIONS **/
+    [login-options]{
+        padding: 0px 20px;
+    }
+
+    [login-options] button{
+        padding: 10px 30px ;
+    }
+    [login-options] button img{
+        width: 15px;
+    }
+
+
+
+    [input][submit]{
+        padding: 0px 30px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+
+
+
+}

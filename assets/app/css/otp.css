@@ -1,3 +1,9 @@
+/*** Important for pages 100% height ***/
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-color: var(--bg-grey);
+}
 
 body{
     background-color: var(--bg-grey);
@@ -6,6 +12,11 @@ body{
 [outer-container]{
     display:  block;
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
 [outer-container] [one]{
@@ -129,6 +140,8 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-direction: row;
+        padding: unset;
     }
 
     [outer-container] [one]{
