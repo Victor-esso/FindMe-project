@@ -142,14 +142,44 @@ body{
         align-items: center;
         flex-direction: row;
         padding: unset;
+        position: relative;
+        z-index: 1;
     }
 
     [outer-container] [one]{
         display:  block;
-        width: 400px;
+        width: 440px;
         padding: unset;
+        padding: 40px;
+        position: relative;
+        background-color: var(--bg-grey);
+    }
+        
+    [outer-container] [one]::after{
+        content: ' ';
+        background-color: rgba(0, 0, 0,00.09);
+        width: 105%;
+        height: 105%;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: blur(20px);
+        transform: translateY(13%) scale(0.7);
+        border-radius: 0%;
+    }
 
-    
+    [outer-container] [one]::before{
+        content: ' ';
+        background-color: rgba(0, 0, 0,00.02);
+        width: 105%;
+        height: 105%;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: -2.5%;
+        filter: blur(10px);
+        transform: translateY(0%) scale(1.05);
     }
 
     [outer-container] [two]{

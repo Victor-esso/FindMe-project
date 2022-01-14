@@ -10,7 +10,10 @@ section[main-outter-container]{
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-grey);   
+    background-color: var(--bg-grey);  
+    position: relative;
+    z-index: 1; 
+    overflow: hidden;
 }
 section[main-outter-container] [content]{
     height: 100%;
@@ -19,7 +22,36 @@ section[main-outter-container] [content]{
 section[main-outter-container] [illustration]{
     padding: 20px;
     width: 450px;
-    padding: 0px 40px;
+    padding: 40px 40px;
+    position: relative;
+    background-color: var(--bg-grey);
+    
+}
+section[main-outter-container] [illustration]::after{
+    content: ' ';
+    background-color: rgba(0, 0, 0,00.09);
+    width: 105%;
+    height: 105%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(20px);
+    transform: translateY(13%) scale(0.7);
+    border-radius: 0%;
+}
+
+section[main-outter-container] [illustration]::before{
+    content: ' ';
+    background-color: rgba(0, 0, 0,00.02);
+    width: 105%;
+    height: 105%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -2.5%;
+    filter: blur(10px);
+    transform: translateY(0%) scale(1.05);
 }
 
 [tab-right-icon]{
