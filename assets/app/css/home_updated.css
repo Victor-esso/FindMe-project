@@ -1,10 +1,11 @@
+
+
+
 /************************************************************************************/
 /******************************Header Style START*****************************************/
 /***********************************************************************************/
 /**Mobile**/
-i[fix]::before{
-    line-height: unset !important;
-}
+
 
 [header-section]{
     width: 100%;
@@ -492,18 +493,25 @@ div.owl-dots>button.owl-dot.active{
 /************************************************************************************/
 /******************************CATEGORY STYLE STARTS*****************************************/
 /***********************************************************************************/
-[category-section],[pow-section],[pp-section],[pb-section]{
+[section] [container] [item]>a{
+    transition: .2s linear;
+}
+
+[section] [container] [item]>a:active{
+    transform: scale(.95);
+}
+[category-section],[pow-section],[pp-section],[pb-section], [section]{
     padding-left: 20px;
     position: relative;
     margin-bottom: 30px;
 }
 
-[category-section] [container],[pow-section] [container],[pp-section] [container],[pb-section] [container]{
+[category-section] [container],[pow-section] [container],[pp-section] [container],[pb-section] [container],[section] [container]{
     width: 100%;
     position: relative;
     
 }
-[category-section] [container] [item]{
+[category-section] [container] [item],[section] [container] [item]{
     width: 110px;
     height: 165px;
     background-color: #fff;
@@ -654,14 +662,14 @@ div.owl-dots>button.owl-dot.active{
 
 /**Desktop**/
 @media only screen and (min-width: 760px){
-    [category-section],[pow-section],[pp-section] ,[pb-section]{
+    [category-section],[pow-section],[pp-section] ,[pb-section], [section]{
         padding: unset;
         position: relative;
         width: max-content;
         margin: auto;
         margin-bottom: 35px;        
     }
-    [category-section] [container],[pow-section] [container],[pp-section] [container] ,[pb-section] [container]{
+    [category-section] [container],[pow-section] [container],[pp-section] [container] ,[pb-section] [container],[section] [container]{
         width: 1000px;
         overflow-x: hidden;
         overflow-y: auto;
@@ -944,6 +952,7 @@ div.owl-dots>button.owl-dot.active{
     border-radius: 8px;
     margin-right: 10px;
     z-index: 1;
+    background-color: unset;
 }
 
 [pb-section] [container] [item] [image-holder] {
@@ -1043,24 +1052,6 @@ div.owl-dots>button.owl-dot.active{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**Desktop**/
 @media only screen and (min-width: 760px){
     [pb-section] [container] [item]{
@@ -1078,3 +1069,1207 @@ div.owl-dots>button.owl-dot.active{
 /************************************************************************************/
 /****************************** PB  STYLE ENDS*****************************************/
 /***********************************************************************************/
+
+
+/************************************************************************************/
+/****************************** SB  STYLE STARTS*****************************************/
+/***********************************************************************************/
+[sb-section] [bottom-section]{
+    padding-top: unset;
+}
+[sb-section] [container]{
+    height: 305px;
+}
+
+[sb-section] [container] [item]{
+    width: 200px;
+    height: 280px;
+    position: relative;
+    border-radius: 8px;
+    margin-right: 30px;
+    z-index: 1;
+}
+
+[sb-section] [container] [item]>div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    padding-top: 30px;
+}
+
+[sb-section] [container] [item]>div::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 30%;
+    transform: translateY(22%) scale(0.7);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+[sb-section] [container] [item]>div::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.009);
+    transform: translateY(1%) scale(1);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+[sb-section] [container] [item] [image-holder]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+
+}
+[sb-section] [container] [item] [image-holder] img{
+    width: 120px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+[sb-section] [container] [item] h3{
+    font-size: .8rem;
+    font-weight: 800;
+    text-align: center;
+    margin: unset;
+    color: var(--main);
+    margin-top: 5px;
+    cursor: default;
+}
+[sb-section] [container] [item] p{
+    font-size: .7rem;
+    font-weight: 300;
+    text-align: center;
+    margin: unset;
+    color: var(--txt-on-grey);
+    cursor: default;
+}
+
+[sb-section] [container] [item] [bottom]{
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[sb-section] [container] [item] [bottom] a{
+    background-color: var(--main);
+    width: fit-content;
+    height: unset;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+[sb-section] [container] [item] [bottom] a i{
+    width: 30px;
+    text-align: center;
+    color: #fff;   
+    margin-left: 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.171);
+    font-size: 1.1rem;
+
+}
+
+[sb-section] [container] [item] [bottom] a span{
+    font-size: .75rem;
+    color: #fff;
+    font-weight: 500;
+    
+}
+
+[sb-section] [container] [item] [new]{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: .7rem;
+    background-color: var(--main);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: default;
+}
+
+
+[sb-section] [container] [item] [new] i{
+    text-align: center;
+    color: #fff;   
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+}
+[sb-section] [container] [item] [new] span{
+    font-size: .65rem;
+    text-transform:uppercase;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    
+}
+
+
+/************************************************************************************/
+/****************************** SB  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+
+
+
+
+/************************************************************************************/
+/****************************** TOE  STYLE STARTS*****************************************/
+/***********************************************************************************/
+
+[toe-section] [container] [item]{
+    width: 190px;
+    height: 270px;
+    position: relative;
+    border-radius: 7px;
+    margin-right: 20px !important;
+}
+
+[toe-section] [container] [item] [image-holder] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+[toe-section] [container] [item] [image-holder] img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+[toe-section] [container] [item] [fade]{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(43,54,90,0), rgba(43,54,90,0), rgba(43,54,90,0) , rgba(43,54,90,.4), rgba(43,54,90,.8));
+    position: absolute;
+    border-radius: 7px;
+}
+
+[toe-section] [container] [item] [details]{
+    width: 100%;
+    position: absolute;
+    bottom:10px;
+}
+[toe-section] [container] [item] [details] [top]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 10px;
+    margin-bottom: 5px;
+}
+[toe-section] [container] [item] [details] [top] [left]>[main]{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+[toe-section] [container] [item] [details] [top] [left] span{
+    font-size: .9rem;
+    margin-right: 4px;
+    font-weight: 500;
+}
+[toe-section] [container] [item] [details] [top] [left] i{
+    font-size: .7rem;
+    padding-top: 3px;
+}
+[toe-section] [container] [item] [details] [top] [left]>[sub]{
+    font-size: .75rem;
+    color: #fff;
+    margin-top: -3px;
+    font-weight: 200;
+    cursor: default;
+}
+[toe-section] [container] [item] [details] [top] [right]{
+    position: relative;
+    z-index: 1;
+}
+[toe-section] [container] [item] [details] [top] [right] button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: .7rem;
+    position: relative;
+    color: var(--main);
+    background-color: #fff;
+}
+[toe-section] [container] [item] [details] [top] [right] button i{
+    padding-top: 2px;
+    padding-left: 1px;
+}
+[toe-section] [container] [item] [details] [top] [right] button::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(.8);
+    z-index: -1;
+    opacity: 1;
+    transition: .3s ease-in-out;
+}
+[toe-section] [container] [item] [details] [top] [right] button:hover::after{
+    transform: scale(1.8);
+    opacity: .1;
+}
+
+
+[toe-section] [container] [item] [details] [bottom]{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    padding-top: 5px;
+}
+[toe-section] [container] [item] [details] [bottom]::after{
+    content: ' ';
+    background-color: rgba(255, 255, 255, 0.13);
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+[toe-section] [container] [item] [details] [bottom] [left]{
+    font-size: .6rem;
+    color: #fff;
+}
+
+[toe-section] [container] [item] [details] [bottom] [right]{
+    font-size: .6rem;
+    color: #fff;
+}
+[toe-section] [container] [item] [details] [bottom] [right] button{
+    display: flex;
+    align-items: center;
+    padding: 0px 4px;
+    border-radius: 2px;
+    background-color: unset;
+    color: #fff;
+}
+[toe-section] [container] [item] [details] [bottom] [right] button:hover{
+    background-color: rgba(0, 0, 0, 0.082);
+
+}
+[toe-section] [container] [item] [details] [bottom] [right] button i{
+    padding-top: 3px;
+    margin-right: 3px;
+}
+
+
+
+[toe-section] [container] [item] [views]{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.082);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0px 3px;
+    border-radius: 4px;
+    cursor: default;
+}
+[toe-section] [container] [item] [views] i{
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    margin-right: 2px;
+    font-size: .7rem;
+    height: 15px;
+
+}
+
+[toe-section] [container] [item] [views] span{
+    font-size: .6rem;
+    margin: unset;
+    height: 15px;
+    display: flex;
+    align-items: center;
+}
+
+[toe-section] [container] [item] [more]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: unset;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 7px;
+    padding-top: 5px;
+    border-radius: 4px;
+    font-size: .8rem;
+    transition: .2s linear;
+}
+
+[toe-section] [container] [item] [more]:hover{
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+/************************************************************************************/
+/****************************** TOE  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+
+
+/************************************************************************************/
+/****************************** AD  STYLE STARTS*****************************************/
+/***********************************************************************************/
+
+[ad-section] [container] [item]{
+    width: 230px;
+    height: unset;
+    position: relative;
+    border-radius: 7px;
+    margin-right: 60px;
+    background-color: unset;
+    padding-top: 40px;
+}
+[ad-section] [container] [item] [image-holder]{
+    background-color: red;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+[image-holder] img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+[ad-section] [container] [item] [bottom] {
+    padding: 0px 0px 0px 5px;
+}
+
+[ad-section] [container] [item] [bottom] span {
+    font-size: .7rem;
+    font-weight: 200;
+    color: var(--txt-on-grey);
+}
+[ad-section] [container] [item] [bottom] h3{
+    margin: unset;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--main);
+}
+
+[ad-section] [container] [item] [tag]{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    right: -40px;
+    background-color: var(--main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+[ad-section] [container] [item] [tag] span{
+    display: block;
+    text-align: center;
+    font-size: .6rem;
+    font-weight: 200;
+}
+
+[ad-section] [container] [item] [tag] p{
+    margin: unset;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    font-weight:800;
+}
+
+
+
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    [ad-section] [container] [item]{
+        margin-right: 120px;
+    }
+}
+
+
+
+/************************************************************************************/
+/****************************** AD  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+/************************************************************************************/
+/****************************** WM  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+[wm-section] [container] [item]{
+    width: 280px;
+    height: 490px;
+    margin-right: 70px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+[wm-section] [container] [item] [pattern]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+[wm-section] [container] [item] [pattern] img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+[wm-section] [container] [item] [pattern] [white],[wm-section] [container] [item] [pattern][one] [black], [wm-section] [container] [item] [pattern][two] [black], [wm-section] [container] [item] [pattern][three] [black]{
+    display: none;
+}
+
+[wm-section] [container] [item] [pattern][one]{
+    background-color: grey;
+}
+
+[wm-section] [container] [item] [pattern][one] [white]{
+    display: block;
+    opacity: .1;
+}
+
+[wm-section] [container] [item] [pattern][two]{
+    background-color: rgb(235, 235, 235);
+}
+
+[wm-section] [container] [item] [pattern][two] [white]{
+    display: block;
+    opacity: 1;
+}
+
+[wm-section] [container] [item] [pattern][three]{
+    background-color: var(--main);
+}
+
+[wm-section] [container] [item] [pattern][three] [white]{
+    display: block;
+    opacity: .05;
+}
+[wm-section] [container] [item] [back-image]{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+[wm-section] [container] [item] [back-image] [image-holder]{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 50%;
+    max-height: 90%;
+    overflow: hidden;
+}
+[wm-section] [container] [item] [image-holder] img{
+    position: relative;
+    height: 100%;
+    
+}
+
+[wm-section] [container] [item] [details]{
+    position: absolute;
+    width: 90%;
+    background-color: #fff;
+    bottom: 20px;
+    left: 0;
+    padding: 10px;
+    padding-left: 20px;
+    cursor: default !important;
+}
+
+[wm-section] [container] [item] [details] h3{
+    margin: unset;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--main);
+    padding-right: 5px;
+}
+
+[wm-section] [container] [item] [details] [sub-title]{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+[wm-section] [container] [item] [details] [sub-title] ul{
+    color: var(--main);
+}
+[wm-section] [container] [item] [details] [sub-title] ul li{
+    font-weight: 700;
+    font-size: .7rem;
+}
+[wm-section] [container] [item] [details] [sub-title]>i{
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    font-size: .9rem;
+    
+}
+
+[wm-section] [container] [item] [details] [passage]{
+    padding-right: 10px;
+}
+[wm-section] [container] [item] [details] [passage] [main]{
+    font-size: .75rem;
+    color: var(--txt-on-grey);
+    font-weight: 200;
+}
+[wm-section] [container] [item] [details] [passage] [sub]{
+    font-size: .65rem;
+    color: var(--main);
+    font-weight: 500;
+}
+[wm-section] [container] [item] [details] [bottom]{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 10px;
+   margin-top: 5px;
+}
+[wm-section] [container] [item] [details] [bottom]>div{
+    display: flex;
+    font-size: .7rem;
+    color: var(--txt-on-grey);
+}
+[wm-section] [container] [item] [details] [bottom] a{
+    color: #fff;
+    background-color: var(--main);
+    width: unset;
+    padding: 5px 15px;
+    font-size: .75rem;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    
+}
+
+/************************************************************************************/
+/****************************** WM  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************/
+/****************************** POST  STYLE ENDS*****************************************/
+/***********************************************************************************/
+[post_01-section]{
+    position: relative;
+}
+[post_01-section] [container] [item]{
+    width: 230px;
+    height: 310px;
+    margin-right: 25px;
+    border-radius: unset;
+    background-color: unset;
+}
+[post_01-section] [container] [item] a{
+    border-radius: 10px;
+    overflow: hidden;
+}
+[post_01-section] [container] [item] [image-holder]{
+    width: 100%;
+    height: 100%;
+}
+[post_01-section] [profile-top], [post_02-section] [profile-top]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+[post_01-section] [profile-top]>div, [post_02-section] [profile-top]>div{
+    width: fit-content;
+}
+
+[post_01-section] [profile-top] [image-holder], [post_02-section] [profile-top] [image-holder]{
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+[post_01-section] [profile-top] [left] , [post_02-section] [profile-top] [left]{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: default;
+}
+
+[post_01-section] [profile-top] [text-holder], [post_02-section] [profile-top] [text-holder] {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left: 5px;
+    color: var(--main);
+}
+[post_01-section] [profile-top] [text-holder] span , [post_02-section] [profile-top] [text-holder] span{
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+[post_01-section] [profile-top] [text-holder] i , [post_02-section] [profile-top] [text-holder] i{
+    
+    font-size: .8rem;
+
+}
+
+[post_01-section] [profile-top] [right] button, [post_02-section] [profile-top] [right] button{
+    background-color: unset;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: .1s linear;
+    color: var(--main);
+}
+[post_01-section] [profile-top] [right] button:hover, [post_02-section] [profile-top] [right] button:hover{
+    background-color: rgba(158, 158, 158, 0.082);
+}
+
+[post_01-section] [passage]{
+    width: 100%;
+    color: var(--main);
+    font-weight: 300;
+    padding: 0px 10px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+[post_01-section] .post_01-prev, [post_01-section] .post_01-next{
+    top: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    [post_01-section] [passage]{
+        width: 1000px;
+    }
+}
+
+
+
+/************************************************************************************/
+/****************************** POST  STYLE END*****************************************/
+/***********************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************/
+/****************************** TAGS  STYLE STARTS*****************************************/
+/***********************************************************************************/
+[tag-section]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+[tag-section] ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap:wrap;
+    margin: unset;
+}
+[tag-section] ul li{
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+[tag-section] ul li a{
+    font-size: .8rem;
+    text-decoration: none;
+    color: var(--txt-on-grey);
+    background-color: rgba(199, 197, 197, 0.295);
+    padding: 4px 15px;
+    border-radius: 5px;
+}
+
+[tag-section] ul li a:hover{
+    background-color: var(--main);
+    color: #fff;
+}
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    [tag-section]{
+       margin-top: 60px;
+       margin-bottom: 50px;
+    }
+
+    [tag-section] ul{
+       max-width: 800px;
+    }
+}
+
+
+
+/************************************************************************************/
+/****************************** TS  STYLE STARTS*****************************************/
+/***********************************************************************************/
+[ts-section] [container] [item]{
+    width: 160px;
+    height:fit-content;
+    margin-right: 40px;
+    background-color: unset;
+}
+[ts-section] [container] [item] [image-holder]{
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+[ts-section] [container] [item] [details]{
+    padding: 5px 0px 0px 10px;
+}
+[ts-section] [container] [item] [store]{
+    font-size: .65rem;
+    font-weight: 500;
+    color: var(--txt-on-grey);
+    margin-bottom: -3px;
+}
+
+[ts-section] [container] [item] [product]{
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--main);
+}
+
+[ts-section] [container] [item] [Price]{
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--main);
+    margin-top: -6px;
+}
+
+
+
+/************************************************************************************/
+/****************************** TS  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+
+
+
+
+
+/************************************************************************************/
+/****************************** cst  STYLE STARTS*****************************************/
+/***********************************************************************************/
+
+[cst-section] [container] [item]{
+    width: 220px;
+    height: 150px;
+    position: relative;
+    background-color: unset;
+}
+[cst-section] [container] [item] a{
+    overflow: hidden;
+    border-radius:10px;
+    background-color: black;
+}
+[cst-section] [container] [item] [image-holder]{
+    width: 100%;
+    height: 100%;
+}
+[cst-section] [container] [item] [image-holder] img {
+    transition: .2s ease-in-out;
+}
+[cst-section] [container] [item]:hover [image-holder] img{
+    transform: scale(1.1);
+    opacity: .85;
+}
+
+[cst-section] [container] [item] [title] {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    bottom: 15px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: rgba(17, 17, 17, 0.295);
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: .2s ease-in-out;
+}
+[cst-section] [container] [item]:hover [title] {
+    background-color: rgba(17, 17, 17, 0.596);
+}
+
+
+
+
+/************************************************************************************/
+/****************************** cst  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+/************************************************************************************/
+/****************************** POST 02  STYLE STARTS*****************************************/
+/***********************************************************************************/
+
+
+
+[post_02-section] [container] [item].swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 170px;
+    height: 250px;
+    background-color: unset;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    margin-right: unset;
+}
+
+[post_02-section] [container] [item].swiper-slide.swiper-slide-active {
+    transform: scale(1.4);
+    opacity: 1;
+    z-index: 20;
+}
+
+[post_02-section] [container] [item].swiper-slide.swiper-slide-prev, [post_02-section] [container] [item].swiper-slide.swiper-slide-next {
+    opacity: .7;
+}
+
+[post_02-section] [container] [item].swiper-slide.swiper-slide-prev{
+    transform: translateX(-50px) scale(1.1);
+}
+
+[post_02-section] [container] [item].swiper-slide.swiper-slide-next{
+    transform: translateX(50px) scale(1.1);
+}
+
+
+[post_02-section] [container] [item].swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+[post_02-section] .swiper-wrapper{
+    align-items: center;
+}
+
+
+[post_02-section] [container]{
+    overflow: unset;
+    height: 380px;
+}
+
+[post_02-section] {
+    padding-left: unset;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+[post_02-section] [back-image]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+[post_02-section] [back-image] [image-holder]{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+[post_02-section] [back-image] img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .3;
+}
+[post_02-section] [profile-top]{
+    margin-bottom: 10px;
+}
+[post_02-section] [profile-top] [category] {
+    text-transform: uppercase;
+    margin-left: 10px;
+    color: var(--txt-on-grey);
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+[post_02-section] [profile-top] [pubished] span{
+    margin-left: 10px;
+    font-size: .6rem;
+    color: var(--txt-on-white);
+}
+
+[post_02-section] [container] [item] [image-holder]{
+    width: 100%;
+    height: 100%;
+}
+[post_02-section] [container] [item] a{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+[post_02-section] [container] [item] a::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+[post_02-section] [container] [item].swiper-slide.swiper-slide-prev a:after, [post_02-section] [container] [item].swiper-slide.swiper-slide-next a:after {
+    backdrop-filter: blur(2px);
+}
+
+[post_02-section]>[bottom]{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+[post_02-section]>[bottom]>[link]{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+[post_02-section]>[bottom]>[link] a{
+    color: var(--main);
+    border: 1px solid var(--main);
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: .9rem;
+    padding: 10px 0px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--main);
+    color: #fff;
+}
+[post_02-section]>[bottom]>[link] a:hover{
+    text-decoration: none;
+    background-color: var(--main);
+    color: #fff;
+}
+
+[post_02-section]>[bottom]>[details]{
+    width: 100%;
+    color: var(--main);
+    padding: 0px 15px;
+}
+[post_02-section]>[bottom]>[details]>span{
+    display: block;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+
+    [post_02-section] [container] [item].swiper-slide.swiper-slide-prev{
+        transform: translateX(-80px) scale(1.1);
+    }
+    
+    [post_02-section] [container] [item].swiper-slide.swiper-slide-next{
+        transform: translateX(80px) scale(1.1);
+    }
+
+    [post_02-section] [container]{
+        /* width: 740px; */
+        overflow: hidden;
+    }
+
+    [post_02-section]>[bottom]{
+        flex-wrap: nowrap;
+        padding: 20px 10px;
+    }
+
+    [post_02-section]>[bottom]>[link]{
+        width: fit-content;
+        display: block;
+        margin-top: unset;
+    }
+
+    [post_02-section]>[bottom]>[details]{
+        width: 800px;
+        
+    }
+    [post_02-section]>[bottom]>[link] a{
+        padding: 8px 25px;
+        width: unset;
+        background-color: unset;
+        color: var(--main);
+    }
+
+}
+
+
+
+
+
+/************************************************************************************/
+/****************************** POST 02  STYLE ENDS*****************************************/
+/***********************************************************************************/
+
+
+
+
+
+
+/************************************************************************************/
+/****************************** Footer   STYLE Starts*****************************************/
+/***********************************************************************************/
+
+
+footer>[page-bottom]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--txt-on-grey);
+    font-size: .7rem;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+footer>[page-bottom] i{
+    font-size: 1rem;
+    margin-right: 8px;
+    margin-top: 1px;
+}

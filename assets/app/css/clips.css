@@ -1,0 +1,172 @@
+/************************************************************************************/
+/****************************** Clips  STYLE Starts*****************************************/
+/***********************************************************************************/
+
+
+[clips-section] [container] [item]{
+    width: 140px !important;
+    height: 195px !important;
+    position: relative;
+    border-radius: 7px;
+    margin-right: 20px;
+    max-width: unset !important;
+    background-color: unset;
+}
+
+[clips-section] [container] [item] .info{
+    display: none !important;
+}
+
+
+[clips-section] [container] [item] .item-preview{
+    display: block;
+    
+    border-radius: unset !important;
+    padding: unset !important;
+    height: unset !important;
+    max-height: unset !important;
+    height: unset !important;
+    overflow: unset !important;
+    background: unset !important;
+    height: 100% !important;
+
+    
+}
+.close {
+    color: #fff;
+    text-shadow: unset; 
+    opacity: 1;
+    font-weight: 200 !important;
+    transition: .2s linear;
+}
+.close:hover{
+    color: #fff;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+[clips-section] [container] [item] [back-image]{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 7px;
+    overflow: hidden;
+    position: absolute;
+    top: 0; left: 0;
+}
+[clips-section] [container] [item] [back-image] img, [clips-section] [container] [item] [profile-image] img{
+    border-radius: unset !important;
+    border: unset !important;
+}
+[clips-section] [container] [item] [back-image]>div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.4);
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: .1s linear;
+}
+[clips-section] [container] [item]:hover [back-image]>div{
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0,.6);
+}
+[clips-section] [container] [item] [profile-image]{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+[clips-section] [container] [item] [profile-image]>div{
+    width: 40px;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+[clips-section] [container] [item] [details]{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    z-index: 2;
+}
+[clips-section] [container] [item] [details] p{
+    margin: unset;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: left;
+}
+[clips-section] [container] [item] [details] span{
+    margin: unset;
+    color: #fff;
+    font-size: .65rem;
+    font-weight: 200;
+    text-align: left;
+}
+
+[clips-section] .stories.carousel{
+    overflow: unset;
+}
+[clips-section] [container] [item] .item-link{
+    transition: .2s linear;
+}
+
+[clips-section] [container] [item] .item-link:active .item-preview{
+    transform: scale(.95);
+}
+
+
+
+
+
+
+#zuck-modal-content .story-viewer .slides .item>.media{
+    height: unset;
+    position: unset;
+    left: unset;
+    -webkit-transform: unset;
+    transform: unset;
+    margin: unset;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    #zuck-modal-content .story-viewer .slides .item>.media{
+        width: unset;
+        height: 100%;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************/
+/****************************** Clips  STYLE ENDS*****************************************/
+/***********************************************************************************/

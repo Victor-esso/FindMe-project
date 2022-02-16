@@ -194,7 +194,7 @@ html, body {
 }
 [sub-nav] [icon]{
     background-color: var(--bg-grey);
-    width: 50px !important;
+    width: 40px !important;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -382,7 +382,7 @@ html, body {
     }
 
     [menu-container] [navigation]{
-        width: 60px;
+        width: 50px;
         height: unset;
         border-radius: 10px;
         transition: .3s ease-in-out;
@@ -408,10 +408,10 @@ html, body {
     }
 
     [navigation] a [icon]{
-        width: 60px;
-        height: 50px;
+        width: 50px;
+        height: 40px;
         color: var(--txt-on-white);
-        font-size: unset;
+        font-size: .9rem;
     }
     
     [navigation] a [title]{
@@ -420,18 +420,18 @@ html, body {
 
     
     [navigation] a [title]>span{
-        height: 50px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         color: var(--txt-on-white);
         padding-right: 50px;
-        font-size: .8rem;
+        font-size: .75rem;
         transition: .2s ease-in-out;
         width: 150px;
     }
     [navigation] a [title] [more]{
-        font-size: .7rem;
+        font-size: .6rem;
         color: rgba(173, 173, 173, 0.884);
         margin-top: -16px;
         margin-bottom: -3px;
@@ -483,11 +483,12 @@ html, body {
 
     [sub-nav] ul li a [title]{
         background-color: var(--bg-grey);
-        width: 110px;
+        width: 120px;
         padding-left: 5px;
     }
     [sub-nav] ul{
         margin-bottom: 5px;
+        margin-top: 5px;
     }
 
     [sub-nav] ul li a [badge]{
@@ -496,9 +497,9 @@ html, body {
         font-size: .5rem;
         color: #fff;
         background-color: var(--main);
-        padding: 3px 6px;
+        padding: 2px 5px;
         top: -2px;
-        left: 35px;
+        left: 33px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -508,7 +509,7 @@ html, body {
     }
     [sub-nav] ul li a [badge][typing]{
         background-color: var(--txt-on-grey);
-        padding: 3px 6px;
+        padding: 1px 4px;
         font-size: .5rem;
     }
 
@@ -529,8 +530,8 @@ html, body {
         position: absolute;
         top: 0%;
         transform: translate(-50%,-50%);
-        width: 40px;
-        left: 15%;
+        width: 30px;
+        left: 13%;
         transition: .3s ease-in-out;
     }
     
@@ -542,8 +543,8 @@ html, body {
         position: absolute;
         bottom: 0%;
         transform: translate(-50%,-50%);
-        width: 40px;
-        left: 15%;
+        width: 30px;
+        left: 13%;
         transition: .3s ease-in-out;
     }
 

@@ -48,6 +48,8 @@ function isUndefined(val){
     if(empty){
         if(val == ""){
             return true;
+        }else{
+            return false
         }
     }else{
         if(val != null && val !=false){
@@ -398,6 +400,12 @@ function eventValidElement(e,attribute){
 
   
 
-
+const getIt = function (array, what) {
+    if (array) {
+      return array[what] || '';
+    } else {
+      return '';
+    }
+  };
 
 
