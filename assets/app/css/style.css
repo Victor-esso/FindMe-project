@@ -156,7 +156,7 @@ button{
     margin-bottom: 10px;
     position: relative;
 }
-[input] input{
+[input] input, [input] textarea{
     border: none;
     width: 100%;
     font-size: .85rem;
@@ -165,13 +165,13 @@ button{
     color: var(--txt-on-grey);
 }
 
-[input] input:focus{
+[input] input:focus,  [input] textarea:focus{
     outline: none;
     color: var(--main);
 }
 
 
-[input] input::placeholder{
+[input] input::placeholder, [input] textarea::placeholder{
     color: var(--txt-on-white);
     font-size: .8rem;
     font-weight: 300;
@@ -208,10 +208,27 @@ button{
 [input][icon][icon-right] input, [input][icon] input{
     padding-right: 50px;
 }
-[input][icon] input:focus + div[icon]{
+[input][icon] input:focus + div[icon],[input][icon] textarea:focus + div[icon]{
     color: var(--main);
 }
 
+[input][icon] textarea{
+    padding-right: 35px;
+}
+
+[input][icon]>div[icon]{
+    font-size: 1.3rem;
+}
+[input][icon]>div[icon] button{
+    font-size: inherit;
+    color: inherit;
+    display: grid;
+    place-items:center;
+    padding: 5px 5px;
+    background-color: unset;
+    background-color: rgba(255, 255, 255, 0.253);
+
+}
 
 
 /****************** CHECK BOX ********************************************/
@@ -362,11 +379,86 @@ button{
 }
 
 
+.swiper-wrapper{
+    width: fit-content;
+}
+
+div[icon-box]{
+    display: grid;
+    place-items: center;
+}
+div[icon-box][red]{
+    color: red;
+    background-color: unset;
+}
 
 
+div[info-icon]{
+    display: inline;
+    position: absolute;
+    transform: translateX(5px);
+    cursor: pointer;
+    z-index: 1;
+}
+div[info-icon-relative]{
+    display: inline;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+div[error-msg]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    
+}
+div[error-msg] span{
+    background-color: #72727231;
+    color: var(--main);
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: .7rem;
+    margin-left: 5px;
 
+}
 
+div[info-icon] [icon] svg,div[error-msg] svg, div[info-icon-relative] svg{
+    color: var(--txt-on-grey);
+}
 
+div[info-icon] [icon] svg g path:first-child, div[info-icon] [icon] svg g path:last-child, div[error-msg] svg g path:first-child, div[error-msg] svg g path:last-child, div[info-icon-relative] svg g path:first-child, div[info-icon-relative] svg g path:last-child{
+    color: red;
+}
+
+div[info-icon] [msg], div[info-icon-relative] [msg]{
+    position: absolute;
+    font-size: .7rem;
+    background-color: #727272de;
+    left: 50%;
+    top: 0%;
+    transform: translate(7%,-50%);
+    width: fit-content;
+    max-width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    cursor: default;
+    
+}
+
+div[info-icon]:hover [msg]{
+    display: block;
+}
+div[info-icon] [msg] a, div[info-icon-relative] [msg] a{
+    color: rgb(64, 250, 225);
+    text-decoration: underline;
+}
+
+div[info-icon] [msg] span, div[info-icon-relative] [msg] span{
+    color: rgb(240, 239, 239);
+    opacity: 1;
+}
 
 
 

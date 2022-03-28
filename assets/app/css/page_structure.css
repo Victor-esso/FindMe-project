@@ -37,6 +37,7 @@ html, body {
 [body-cont] [body]{
     background-color: var(--bg-grey);
     transition: .1s linear;
+    position: relative;
 }
 [map-cont] [map]{
     transition: .5s ease-in-out;
@@ -51,6 +52,7 @@ html, body {
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    padding-bottom: 75px;
 }
 [body-cont] [body], [map-cont] [map]{
     position: relative;
@@ -411,7 +413,9 @@ html, body {
         width: 50px;
         height: 40px;
         color: var(--txt-on-white);
-        font-size: .9rem;
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
     }
     
     [navigation] a [title]{
@@ -574,4 +578,95 @@ html, body {
 
 
   
+}
+
+
+
+
+[page-footer-new]{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+}
+[page-footer-new] [bottom-nav-container]{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+
+    position: relative;
+}
+
+[page-footer-new] [bottom-nav-container] [item]{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    /* border: 1px solid grey; */
+    font-size: 2rem;
+    background-color: unset;
+    opacity: .3;
+}
+[page-footer-new] [bottom-nav-container] [item][active]{
+    opacity: 1;
+}
+[page-footer-new] [bottom-nav-container] [item]::after{
+    content: attr(data-name);
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    font-size: .8rem;
+    font-weight: 700;
+    display: none;
+    color: var(--main);
+}
+
+[page-footer-new] [bottom-nav-container] [item][active]::after{
+    display: block;
+}
+
+[page-footer-new] [bottom-nav-container] [item]{
+    color: var(--main);
+}
+
+
+[page-footer-new] [bottom-nav-container] [item][fill] svg path{
+    fill: var(--main);
+}
+[page-footer-new] [bottom-nav-container] [item][stroke] svg path{
+    fill: var(--main);
+}
+
+
+
+[page-footer-new] [bottom-nav-container] [item] svg:last-child,[page-footer-new] [bottom-nav-container] [item][active] svg:first-child{
+    display: none;
+}
+[page-footer-new] [bottom-nav-container] [item][active] svg:last-child{
+    display: block;
+}
+
+[page-footer-new] [bottom-nav-container] [item][data-name="Cart"] svg{
+    font-size: 2.1rem;
+}
+
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    [page-footer-new]{
+        display: none;
+    }
 }

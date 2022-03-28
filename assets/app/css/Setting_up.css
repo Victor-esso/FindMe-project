@@ -1,0 +1,104 @@
+
+.circle-progress{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.circle-progress .outer{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: #CDD2FD;
+}
+
+.circle-progress .inner{
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background-color: var(--bg-grey);
+    display: grid;
+    place-items: center;
+}
+.circle-progress .inner #number{
+    font-weight: 900;
+    font-size: 2.3rem;
+    color: var(--main);
+}
+
+circle{
+
+    top: 0;
+    left: 0;
+    fill: none ;
+    stroke: var(--main);
+    stroke-width: 17.5px;
+    stroke-dasharray: 571;
+    stroke-dashoffset: 571;
+    animation: anims 2s linear forwards;
+}
+
+svg{
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    opacity: 1;
+}
+
+@keyframes anim {
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+section[main-outter-container] [right]{
+    width: 100%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+section[main-outter-container] [right]>div{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+section[main-outter-container] [left]{
+    width: unset;
+    order: 2;
+}
+
+section[main-outter-container] [right] h1{
+    margin: unset;
+    font-weight: 500;
+    font-size: 2.3rem;
+    margin-top: 50px;
+}
+
+section[main-outter-container] [right] p{
+    color: var(--main);
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 2px;
+}
+
+@media only screen and (min-width: 760px){
+    section[main-outter-container] [right]{
+        width: 430px;
+        height: 520px;
+    }
+
+    section[main-outter-container] [right] p{
+        font-size: 1rem;
+    }
+
+
+
+}

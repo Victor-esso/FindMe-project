@@ -178,9 +178,40 @@ $(document).ready(function(){
 
 
 
+    $('a[activate-drop]').each(function(){
+      $(this).click(function(event){
+        event.preventDefault();
+        if($(this)[0].hasAttribute('active')){
+          $(this).removeAttr('active');
+        }else{
+          $(this).attr('active','');
+        }
+      })
+    });
 
 
 
+
+
+
+
+    
+  $('[play]').each(function(){
+    $(this).click(function(e){
+      videEl = $(this).siblings('[holder]').children('video');
+      videEl[0].play();
+      $(this).css('display','none');
+    })
+  })
+  $('[holder]').each(function(){
+    $(this).click(function(){
+      var playIcon = $(this).siblings('[play]');
+      var videoEl = $(this).children('video');
+      videoEl[0].pause();
+      playIcon.css('display','grid');
+    })
+
+  })
 
 
 

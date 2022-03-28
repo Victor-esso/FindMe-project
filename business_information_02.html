@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Animate Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Google Icon-->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <!--Swiper Js CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- Style Sheet-->
+    <link rel="stylesheet" href="assets/app/css/style.css">
+
+    <!-- Login Updated -->    
+    <link rel="stylesheet" href="assets/app/css/login_updated.css">
+
+    <!-- New Business Account Sheet-->
+    <link rel="stylesheet" href="assets/app/css/register_business.css">
+
+    <!-- Business Information Sheet-->
+    <link rel="stylesheet" href="assets/app/css/business_information_02.css">
+
+    <!--Page title-->
+	<title>Business Account 4 of 6</title>
+</head>
+<body >
+
+   
+    <!--Page Arrow-->    
+    <div tab-left-icon-ab><button><a href=""><span class="material-icons-outlined">arrow_back</span></a></button></div>
+    <div tab-right-icon-ab><button><span step>Step 4 of 6</span></button></div>
+
+    <section main-outter-container>
+
+        <div left content style="order:2;" hide-m>
+            
+        </div>
+
+        <div right illustration  style="order:1;" >
+            
+            <div top>
+                <h1>Business Account</h1>
+                <p>Business Information</p>
+            </div>
+
+
+
+
+
+
+
+            <div body no-scrollbar >
+                <!--Swiper section-->
+                <div class="button-swiper" btn-swiper>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide" item><button business-type value="self_owned" >Self owned</button></div>
+                        <div class="swiper-slide" item><button business-type value="partnership" >Partnership</button></div>
+                        <div class="swiper-slide" item><button business-type value="coperate" >Coperate</button></div>
+                        <div class="swiper-slide" item><button business-type value="freelance" >Freelance</button></div>
+
+
+                    </div>
+                </div>
+
+                <form action="" id="business-registration">
+
+                    <input type="text" business-type style="display: none;">
+
+                    <div input-bang>
+                        <div top>
+                            <label for="business_name">Business Name</label>
+                        </div>
+                        <div input icon >
+                            <input type="text" placeholder="Enter Password" id="business_name" disabled value="CasaDiEmO Fashion House">
+                            <div icon for="business_name" good><span class="iconify" data-icon="akar-icons:check-box-fill"></span>
+                            </div>
+                        </div>
+                        <div bottom right>
+                            <a href="">Change</a>
+                        </div>
+                        <!-- <div bottom>
+                            <span>This is to check how it shows on the </span>
+                            <div info-icon-relative>
+                                <span class="iconify" data-icon="bi:patch-question"></span>
+                                <div msg><span>Hi i'm a king in new island Hi Hi i'm a king in new island HiHi i'm a king in new island HiHi i'm a king in new island Hi</span></div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="email">Email</label>
+                        </div>
+                        <div input icon >
+                            <input type="email" id="email" placeholder="user@business.com" required>
+                            <div icon for="email" ></div>
+                        </div>
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="phone">Business Phone</label>
+                        </div>
+                        <div input icon >
+                            <input type="text" id="phone" placeholder="70 565 XXXXX">
+                            <div icon for="phone" ></div>
+                        </div>
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="location">Location</label>
+                        </div>
+                        <div input icon >
+                            <input type="email" id="location" placeholder="No.6">
+                            <div icon for="location"></div>
+                        </div>
+                    </div>
+
+                    <div input-btn-yes-no>
+                        <p>Is this the Head Office?</p>
+                        <div btn-yes-no>
+                            <button active pd-click>Yes</button>
+                            <button pd-click>No</button>
+                        </div>
+                    </div>
+
+                    <div input-btn-yes-no last>
+                        <p>Does your Business have Branch Offices?</p>
+                        <div btn-yes-no>
+                            <button active pd-click>Yes</button>
+                            <button pd-click>No</button>
+                        </div>
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="location">About This Business</label>
+                        </div>
+                        <div input icon >
+
+                            <textarea name="about" id="about" rows="4"  scrollbar placeholder="Write here how you would describe your busniess"></textarea>
+                            
+                        </div>
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="website">Business Website <span>(Optional)</span></label>
+                        </div>
+                        <div input icon >
+                            <input type="email" id="website" placeholder="Past URL">
+                            <div icon for="website"></div>
+                        </div>
+                    </div>
+
+                    <!-- Header -->
+                    <span label>Uploads</span>
+                    
+                    <!-- File Input -->
+                    <div input-bang upload>
+                        <div top>
+                            <div for="logo">
+                                <p important>*</p>
+                                <p>Upload Your Business Logo <Span>(jpeg, png, svg)</Span></p>
+                            </div>
+                        </div>
+
+                        <div input file >
+                            <label for="logo" file-upload-btn><span class="iconify" data-icon="icon-park:upload-two"></span> <span>Choose from gallery</span></label>
+                            <input type="file" id="logo" multiple bang-file>
+
+                            <div table-holder>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 60%;">File Name</th>
+                                            <th style="width: 20%;">Size</th>
+                                            <th style="width: 10%;">Format</th>
+                                            <th style="width: 10%;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div><span class="iconify" data-icon="tabler:notes"></span> <span>Business_image.jpeg</span></div></td>
+                                            <td>23kb</td>
+                                            <td>jpeg</td>
+                                            <td><button><span class="iconify" data-icon="clarity:window-close-line"></span></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Input -->
+                    <div input-bang upload>
+                        <div top>
+                            <div for="storefront">
+                                <p>Upload Your Business Storefront <Span>(jpeg, png, svg)</Span></p>
+                                <p note>Note:This is the image of your physical storefront.</p>
+                            </div>
+                        </div>
+
+                        <div input file >
+                            <label for="storefront" file-upload-btn><span class="iconify" data-icon="icon-park:upload-two"></span> <span>Choose from gallery</span></label>
+                            <input type="file" id="storefront" multiple bang-file>
+
+                            <div table-holder>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 60%;">File Name</th>
+                                            <th style="width: 20%;">Size</th>
+                                            <th style="width: 10%;">Format</th>
+                                            <th style="width: 10%;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Input -->
+                    <div input-bang upload>
+                        <div top>
+                            <div for="highlights">
+                                <p>Upload Your Business Highlights <Span>(jpeg, png, svg)</Span></p>
+                            </div>
+                        </div>
+
+                        <div input file >
+                            <label for="highlights" file-upload-btn><span class="iconify" data-icon="icon-park:upload-two"></span> <span>Choose from gallery</span></label>
+                            <input type="file" id="highlights" multiple bang-file>
+
+                            <div table-holder>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 60%;">File Name</th>
+                                            <th style="width: 20%;">Size</th>
+                                            <th style="width: 10%;">Format</th>
+                                            <th style="width: 10%;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Header -->
+                    <span label>Socials</span>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="facebook">Facebook</label>
+                        </div>
+                        <div input icon >
+                            <input type="url" id="facebook" placeholder="Past URL">
+                        </div>
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="instagram">Instagram</label>
+                        </div>
+                        <div input icon >
+                            <input type="url" id="instagram" placeholder="Past URL">
+                        </div>
+                    </div>
+
+                    <div input-bang>
+                        <div top>
+                            <label for="linkdin">LinkdIn</label>
+                        </div>
+                        <div input icon >
+                            <input type="url" id="linkdin" placeholder="Past URL">
+                        </div>
+                    </div>
+
+                    <!-- Add More -->
+                    <button add-more pd-click>Add More</button>
+
+
+                </form>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div bottom>
+                <button next-btn trigger-submit for="business-registration">Next</button>
+                <button skip-btn>Skip</button>
+            </div>
+            
+
+        </div>
+
+    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <!--Iconify-->
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+    <!--Swiper JS Javascript-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
+
+    <!-- Functions Javascript -->
+    <script src="assets/app/js/functions.js"></script>
+
+    <!-- Default Javascript -->
+    <script src="assets/app/js/javascript.js"></script>
+
+    <!-- Page Javascript -->
+    <script src="assets/app/js/business_information_02.js"></script>
+
+</body>

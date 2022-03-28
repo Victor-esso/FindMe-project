@@ -1,0 +1,198 @@
+body>[top]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+[tab-left-icon-ab],[tab-right-icon-ab]{
+    position: relative;
+}
+
+
+[plans-holder]{
+    height: 100%;
+}
+
+[plans-holder] [make]{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 10px;
+    height: 100%;
+}
+
+[plans-holder] h1{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--main);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+[plans-holder] [plan]{
+    background-color: #fff;
+    width: 270px;
+    padding: 30px 10px 30px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+}
+
+[plans-holder] [plan] span{
+    font-size: .8rem;
+    color: var(--txt-on-grey);
+}
+
+[plans-holder] [plan] h2{
+    font-weight: 800;
+    color: var(--main);
+    font-size: 1.5rem;
+}
+
+[plans-holder] [plan] [bottom] {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+[plans-holder] [plan] [bottom] a{
+    display: block;
+    width: 80%;
+    font-size: .8rem;
+    border: 2px solid var(--main);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--main);
+    padding: 10px 0px;
+    font-weight: 700;
+}
+
+[plans-holder] [plan] [bottom] a{
+    text-decoration: none;
+}
+
+
+[plans-holder] [plan] [body] ul{
+    list-style: none; 
+    padding: 0px 0px 0px 15px;  
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+[plans-holder] [plan] [body] ul li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: default;
+    margin-bottom: 7px;
+}
+
+[plans-holder] [plan] [body] ul li [icon]{
+    margin-right: 10px;
+    color:rgba(105, 105, 105, 0.377);
+}
+
+[plans-holder] [make]{
+    height: auto;
+    padding: 0px 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+/* Basic */
+
+[plans-holder] [plan][basic]:hover{
+    border: 2px solid rgb(230, 230, 230);
+}
+
+[plans-holder] [plan][basic]:hover [bottom] a{
+    border-color: rgb(177, 177, 177);
+    background-color: rgb(177, 177, 177);
+    color: #fff;
+    
+}
+
+/* Standard */
+
+[plans-holder] [plan][standard]:hover{
+    border: 2px solid var(--main);
+}
+
+[plans-holder] [plan][standard]:hover [bottom] a{
+    border-color: var(--main);
+    background-color: var(--main);
+    color: #fff;
+    
+}
+
+/* gold */
+
+[plans-holder] [plan][gold]:hover{
+    border: 2px solid #dba514;
+}
+
+[plans-holder] [plan][gold]:hover [bottom] a{
+    border-color: #dba514;
+    background-color: #dba514;
+    color: #fff;
+    
+}
+
+/* Enterprise */
+
+[plans-holder] [plan][enterprise]{
+    border: 2px solid red;
+}
+
+[plans-holder] [plan][enterprise] [bottom] a{
+    border-color: red;
+    background-color: red;
+    color: #fff;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px){
+    [plans-holder] [plan]{
+        width: 240px;
+        margin-left: 20px;
+        margin-bottom: unset;
+    }
+
+    [plans-holder] [plan]:first-child{
+        margin-left: unset;
+    }
+
+    [tab-left-icon-ab],[tab-right-icon-ab]{
+        position: absolute;
+    }
+    [plans-holder] [make]{
+        height: 100%;
+        
+    }
+
+    [plans-holder] h1{
+        position: absolute;
+        top: 30px;
+        margin: unset;
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+
+    [plans-holder] [make]{
+        margin: unset;
+    }
+    
+}

@@ -1,0 +1,124 @@
+
+
+
+
+
+
+
+
+
+
+[main-outter-container] [right][illustration] [bottom-section]{
+    height: 250px;
+    position: relative;
+}
+[main-outter-container] [right][illustration]>p{
+
+    margin: unset;
+    margin-bottom: 30px;
+}
+[main-outter-container] [right][illustration][error]>p{
+    margin-bottom: 10px;
+}
+div[input]>label{
+    color: var(--main);
+    font-weight: 700;
+    font-size: .9rem;
+    padding-left: 10px;
+}
+
+div[link-info]{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+div[link-info]>a{
+    color: var(--txt-on-grey);
+    text-decoration: underline;
+    font-size: .9rem;
+    font-weight: 500;
+}
+div[link-info]>a:hover{
+    color: var(--main);
+}
+
+
+
+div[error-msg]{
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+div[error-msg] span{
+    color: red;
+    font-size: .7rem;
+    margin-left: 5px;
+}
+
+
+button[next-btn]{
+    position: fixed;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: 80%;
+    margin: auto;
+    background-color: var(--main);
+    color: #fff;
+    padding: 20px 0px;
+    font-size: .9rem;
+    border-radius: 10px;
+
+}
+[bottom-section]>p,[btn-yes-no],div[link-info]{
+    display: none;
+}
+[or-divider]{
+    display: none;
+}
+
+[main-outter-container] [right][illustration][error] [bottom-section]>p,[main-outter-container] [right][illustration][error] [btn-yes-no],[main-outter-container] [right][illustration][error] div[link-info]{
+    display: block;
+}
+[main-outter-container] [right][illustration][error]>div[error-msg],[main-outter-container] [right][illustration][error] [or-divider]{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 760px){
+    [main-outter-container] [right][illustration] {
+        width: 390px;
+    }
+    [main-outter-container] [right][illustration] [bottom-section]{
+        height: 220px;
+    }
+
+    div[error-msg]{
+        justify-content: center;
+    }
+    
+    button[next-btn]{
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: auto;
+        background-color: var(--main);
+        color: #fff;
+        padding: 15px 0px;
+        font-size: .9rem;
+        border-radius: 10px;
+        bottom: unset;
+    }
+
+    
+}

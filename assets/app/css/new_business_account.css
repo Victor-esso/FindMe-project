@@ -1,0 +1,190 @@
+
+/* DefaulT Settings Start */
+html,body{
+    height: 100%;
+}
+
+body{
+    background-color: var(--bg-grey);
+}
+
+
+[main-content]{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 70px 20px 0px 20px ;
+}
+
+[tab-left-icon-ab] {
+    left: 10px;
+}
+
+/* Default Setting End */
+
+
+
+
+[main-content] [top]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main);
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.103);
+}
+
+[main-content] [top] h1{
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: unset;
+}
+
+[main-content] [top] span{
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+[main-content]>[content]{
+    padding-top: 35px;
+}
+
+[main-content]>[content]>p{
+    color: var(--txt-on-grey);
+    font-size: .85rem;
+}
+
+[main-content]>[content]>[accodion]{
+    width: 100%;
+}
+
+[main-content]>[content]>[accodion]>button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px 10px 5px;
+    background-color: unset;
+    color: var(--main);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+[main-content]>[content]>[accodion]>button:hover{
+    background-color: rgba(121, 121, 121, 0.014);
+}
+
+[main-content]>[content]>[accodion]>button svg{
+    display: none;
+    margin-left: 5px;
+}
+
+
+[main-content]>[content]>[accodion] [content]{
+    border-top: 1px solid var(--main);
+    height: auto;
+    overflow: unset;
+    margin-top: 10px;
+    transition: .2s linear;
+    opacity: 1;
+}
+
+[main-content]>[content]>[accodion][close] [content]{
+    opacity: 0;
+    transition: .2s linear;
+    margin: unset;
+}
+
+[main-content]>[content]>[accodion][close]>button svg[data-icon="carbon:chevron-right"]{
+    display: block;
+}
+
+[main-content]>[content]>[accodion][open]>button svg[data-icon="carbon:chevron-down"]{
+    display: block;
+}
+
+
+
+[main-content]>[content]>[accodion] [content] a{
+    color: var(--main);
+    display: block;
+    padding: 15px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--main);
+}
+
+[main-content]>[content]>[accodion] [content] a:hover{
+    text-decoration: none;
+    background-color: rgba(121, 121, 121, 0.014);
+}
+
+[main-content]>[content]>[accodion] [content] h2{
+    font-size: .95rem;
+    margin: unset;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+[main-content]>[content]>[accodion] [content] p{
+    color: var(--txt-on-grey);
+    font-size: .85rem;
+    padding-left: 5px;
+    padding-right: 20px;
+    margin: unset;
+}
+
+
+[main-content]>[content]>[accodion] [content] a svg{
+    font-size:1.7rem;
+}
+
+
+
+/**Desktop**/
+@media only screen and (min-width: 760px){
+    /* Default Setitings start */
+    [a-page]{
+        padding-top: 20px;
+    }
+
+
+    [header-section] [logo-section] [back-btn]{
+        font-size: 2.5rem !important;
+        background-color: unset;
+        position: absolute ;
+        left: 40px;
+    }
+
+    /* Default Settings End */
+
+    [main-content]{
+        padding: unset;
+        padding-top: 70px;
+        
+    }
+
+    [main-content] [top], [main-content]>[content]{
+        padding-left: 200px;
+        padding-right: 50px;
+    }
+
+
+    [main-content]>[content]>[accodion]{
+        width: 300px;
+    }
+
+
+    [main-content]>[content]>[accodion]>button{
+        padding: 10px 0px 10px 5px;
+    }
+
+
+}
+
+
+
+
+
